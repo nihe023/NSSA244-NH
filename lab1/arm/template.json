@@ -247,6 +247,20 @@
                         "deleteOption": "Delete",
                         "diskSizeGB": 30
                     },
+					"dataDisks": [
+                        {
+                            "lun": 0,
+                            "createOption": "Empty",
+                            "caching": "ReadWrite",
+                            "writeAcceleratorEnabled": false,
+                            "managedDisk": {
+                                "storageAccountType": "StandardSSD_LRS"
+                            },
+                            "deleteOption": "Detach",
+                            "diskSizeGB": 16,
+                            "toBeDetached": false
+                        }
+                    ],
                     "diskControllerType": "SCSI"
                 },
                 "osProfile": {
