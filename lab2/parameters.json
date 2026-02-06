@@ -14,11 +14,29 @@
         "networkInterfaces_web1813_z2_name": {
             "value": "web1813_z2"
         },
+        "virtualMachines_WEB2_name": {
+            "value": "WEB2"
+        },
+        "sshPublicKeys_WEB2_key_name": {
+            "value": "WEB2_key"
+        },
+        "publicIPAddresses_WEB2_ip_name": {
+            "value": "WEB2-ip"
+        },
+        "networkInterfaces_web2813_z2_name": {
+            "value": "web2813_z2"
+        },
         "virtualNetworks_VNET_LAB1_name": {
             "value": "VNET-LAB1"
         },
         "networkSecurityGroups_NSG_WEB_name": {
             "value": "NSG-WEB"
+        },
+        "loadBalancer_LBALANCER_name": {
+            "value": "LBALANCER"
+        },
+        "publicIPAddresses_LBALANCER_ip_name": {
+            "value": "LBALANCER-ip"
         }
     }
 }

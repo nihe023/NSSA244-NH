@@ -99,7 +99,6 @@
                 "2"
             ],
             "properties": {
-                "ipAddress": "172.206.56.56",
                 "publicIPAddressVersion": "IPv4",
                 "publicIPAllocationMethod": "Static",
                 "idleTimeoutInMinutes": 4,
@@ -188,22 +187,19 @@
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "Premium_LRS",
-                            "id": "[resourceId('Microsoft.Compute/disks', concat(parameters('virtualMachines_WEB1_name'), '_OsDisk_1_9f7adb186f6e46f6b1877706c7a70615'))]"
+                            "storageAccountType": "Premium_LRS"
                         },
                         "deleteOption": "Delete",
                         "diskSizeGB": 30
                     },
-                    "dataDisks": [
+					"dataDisks": [
                         {
                             "lun": 0,
-                            "name": "[concat(parameters('virtualMachines_WEB1_name'), '-DATA1')]",
-                            "createOption": "Attach",
+                            "createOption": "Empty",
                             "caching": "ReadWrite",
                             "writeAcceleratorEnabled": false,
                             "managedDisk": {
-                                "storageAccountType": "StandardSSD_LRS",
-                                "id": "[resourceId('Microsoft.Compute/disks', 'web1-data1')]"
+                                "storageAccountType": "StandardSSD_LRS"
                             },
                             "deleteOption": "Detach",
                             "diskSizeGB": 16,
@@ -235,8 +231,7 @@
                         }
                     },
                     "secrets": [],
-                    "allowExtensionOperations": true,
-                    "requireGuestProvisionSignal": true
+                    "allowExtensionOperations": true
                 },
                 "securityProfile": {
                     "uefiSettings": {
